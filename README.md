@@ -2,6 +2,13 @@
 
 Provides a pflag wrapper that addresses pain-points of backwards-compatible `ComponentConfig` migration.
 
+## Development Tips
+
+If you modify the codegen templates in `hack/gen/gen.go`, or update the 
+generator config in `hack/gen/config.json` remember to run
+`go run hack/gen/gen.go --config hack/gen/config.json` to regenerate source 
+files and tests.
+
 ## Community, discussion, contribution, and support
 
 Learn how to engage with the Kubernetes community on the [community page](http://kubernetes.io/community/).
