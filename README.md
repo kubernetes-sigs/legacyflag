@@ -1,4 +1,4 @@
-# legacyflag
+# legacyflag – EXPERIMENTAL
 
 Provides a pflag wrapper that addresses pain-points of backwards-compatible `ComponentConfig` migration.
 
