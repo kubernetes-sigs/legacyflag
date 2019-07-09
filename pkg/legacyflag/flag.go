@@ -32,6 +32,11 @@ func NewFlagSet(name string) *FlagSet {
 	}
 }
 
+// NewFromPFlagSet creates a new FlagSet given a PFlagSet.
+func NewFromPFlagSet(fs *pflag.FlagSet) *FlagSet {
+	return &FlagSet{fs: fs}
+}
+
 // PflagFlagSet returns the underlying pflag.FlagSet.
 func (fs *FlagSet) PflagFlagSet() *pflag.FlagSet {
 	return fs.fs
