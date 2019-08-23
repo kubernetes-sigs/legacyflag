@@ -45,3 +45,12 @@ func (v *VarValue) Apply(apply func()) {
 		apply()
 	}
 }
+
+// Value returns the value for the registered flag if the flag was set.
+func (v *VarValue) Value() interface{} {
+	if v.fs.Changed(v.name) {
+		flag := v.fs.Lookup(v.name)
+		return flag.Value
+	}
+	return nil
+}
